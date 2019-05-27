@@ -130,7 +130,7 @@ vertial-align的一个特性：图片或者表单等行内元素，他的底线�
 }
 ```
 
-#### CSS精灵技术（sprite）小妖精 雪碧
+#### CSS精灵技术（sprite）
 
 ##### 技术产生的背景
 
@@ -173,3 +173,108 @@ a>span
 a 背景图像是左边切片
 
 span 背景图像是右边切片，位置是靠右对齐
+
+#### web字体
+
+##### 字体格式
+
+不同的浏览器所支持的字体格式是不一样的。我们先了解有关字体格式的知识。
+
+1. TureType(.ttf)格式
+
+   是win和mac最常见的字体，是一种RAW格式，支持这种字体的浏览器有IE9+、Firefox3.5+、Chrome4+、Safari3+、iOS Moblie、Safari4.2+
+
+2. OpenType(.otf)格式
+
+    被认为是一种原始的字体格式，其内置在TureType的基础上。
+
+3. Web Open Font Format(.woff)格式
+
+   是Web中的最佳格式，他是一个开放的TrueType/OpenType的压缩版本，同时也支持元数据包的分离
+
+4. Embedded Open Type(.eot)格式
+
+   IE专业字体，支持IE4+
+
+5. SVG(.svg)格式
+
+   基于SVG字体渲染的一种格式。
+
+#### 字体图标
+
+图片有诸多优点，但是缺点明显，比如图片不但增加了总文件的大小，还增加了很多额外的“http请求”，这都会大大降低网页的性能。更重要的是图片不能很好的进行“缩放”，因为图片放大和缩小会失真。字体图标（iconfont）能够满足这个需求。
+
+##### 字体图标的优点
+
+可以做图片可以做的事情，改变透明度、旋转度……
+
+本质还是文字，可以随意改变颜色、产生阴影、透明效果
+
+本身体积更小，但携带的信息并没有消减
+
+几乎支持所有浏览器
+
+移动端必备
+
+##### 字体图标使用流程
+
+1. UI人员设计字体图标效果图（svg）
+2. 前端人员上传生成兼容性字体文件包
+3. 前端人员下载兼容字体文件包到本地
+4. 把字体文件包引入到HTML页面
+
+###### 设计字体图标
+
+假设图标是需要公司单独设计的，UI设计人员设计，存为.svg格式给到前端人员即可。
+
+###### 上传生成字体包
+
+设计人员给了.svg文件，上传到这些网站再转换为可使用的字体文件。
+
+如果不需要单独设计，可在以下网站上进行选择、下载。
+
+推荐网站：
+
+icomoon : https://icomoon.io/
+
+阿里巴巴Iconfont：https://www.iconfont.cn/  免费
+
+fontello: <http://fontello.com/>  在线制定自己的字体图标，github开源项目
+
+fontawesome :<http://fontawesome.dashgame.com/>> 更新比较快
+
+###### 下载兼容字体包
+
+下载到本地，放在项目的font文件夹下
+
+###### 字体引入到HTML
+
+第一步，在样式<style>中声明字体：告诉别人我们自己定义的字体
+
+```css
+@font-face {
+    /* 1.首先指定字体的系列,我们指定为字体图标，可以自己取名 */
+    font-family: "iconfont";
+    /* 2.接下来的代码指定了字体图标的路径,兼容了各种移动端浏览器和PC端浏览器,你可以根据自己的需要,删除不必要的兼容 */
+    src: url('iconfont.eot?t=1541904002925'); /* IE9*/
+    src: url('iconfont.eot?t=1541904002925#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.ttf?t=1541904002925') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('iconfont.svg?t=1541904002925#iconfont') format('svg'); /* iOS 4.1- */
+    font-weight:normal;
+    font-style:normal;/* 倾斜字体变正常 */
+}
+```
+
+第二步，`<span></span>`，复制demo中对应的字体图标到span元素
+
+第三步，给盒子定义使用字体
+
+```css
+span {
+​	font-family:"iconfont";
+}
+```
+
+##### 追加字体图标
+
+工作中，原来的字体图标不够用需要新增字体图标，原来的不能删除，此时我们需要将压缩包中的selection.json重新上传，然后选中自己想要的新增图标，重新下载压缩包替换原来的文件。
