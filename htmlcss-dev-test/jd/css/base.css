@@ -1,0 +1,79 @@
+/* 公共样式 */
+
+/* 京东的头部和底部也是各个页面共有的，写在base.css中 */
+
+.w{
+    width: 1190px;
+    margin: auto;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iconfont.woff2') format('woff2'),
+        url('../fonts/iconfont.woff') format('woff'),
+        url('../fonts/iconfont.ttf') format('truetype'),
+        url('../fonts/iconfont.svg#iconfont') format('svg');
+  }
+
+/* 京东顶部 start */
+.J_event {
+    /* height: 80px; 子元素有高，可不用高*/
+    background-color: #4112b1;
+    
+}
+.top {
+    display: block;
+    height: 80px;
+    background-image: url(../images/topbanner.jpg);
+    position: relative;
+    
+}
+
+.iconfont {
+    font-family: "iconfont";
+    font-size: 20px;
+    font-style: normal;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.4); 
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color:#fff;
+    line-height: 20px;
+    text-align: center;
+}
+
+.top-618 {
+    background-image: url(../images/618banner.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 190px;
+    height: 80px;
+    
+}
+.top-phone {
+    position: absolute;
+    top: 15px;
+    right: 300px;
+   
+}
+
+.top-pingpai {
+    position: absolute;
+    top: 15px;
+    right: 160px;
+}
+
+
+/* 京东顶部 end */
