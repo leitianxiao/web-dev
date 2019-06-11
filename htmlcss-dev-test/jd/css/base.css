@@ -14,8 +14,16 @@
 .fr{
     float: right;
 }
+
+.style-red{
+    color:#f10215!important;
+}
+
 li {
     list-style: none;
+}
+a {
+    text-decoration: none;
 }
 ul {
     margin: 0;
@@ -45,7 +53,7 @@ ul {
     
 }
 
-.iconfont {
+.J_event .iconfont {
     font-family: "iconfont";
     font-size: 20px;
     font-style: normal;

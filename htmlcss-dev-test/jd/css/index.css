@@ -2,8 +2,104 @@
 /* 仅写首页独有的样式 */
 
 /* 快捷导航栏 strat */
+
 .shortcut {
     height: 30px;
     background-color: #e3e4e5;
     border-bottom: 1px solid #ddd;
+    line-height: 31px;
 }
+
+.shortcut .fl li{
+    color: #9d9d9d;
+    font-size: 12px;
+    margin-left: 200px;
+}
+
+.shortcut .fl .iconfont {
+    font-family: "iconfont";
+    font-size: 14px;
+    font-style: normal;
+    color:#f10215;
+    line-height: 20px;
+    text-align: center;
+}
+
+.shortcut .fr li { 
+    display: inline-block;  
+}
+
+.shortcut_btn {
+    padding:0 7px;
+}
+
+.shortcut .fr li a {
+    font-size: 12px;
+    color: #9d9d9d;
+    
+    
+}
+
+.shortcut .fr li a:hover {
+    color: #f10215;
+}
+
+.dropdown {
+    padding-right:22px;
+    position: relative;
+}
+
+.dropdown .iconfont {
+    font-family: "iconfont";
+    font-size: 12px;
+    font-style: normal;
+    color:#9d9d9d;
+    line-height: 31px;
+    text-align: center;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+
+}
+
+.spacer {
+    width: 1px;
+    height: 10px;
+    background-color: #9d9d9d;
+    margin-top: 10px 10px 0 10px;
+
+}
+
+.qrcode {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    position: absolute;
+    top:30px;
+    right: 0;
+}
+.qrcode img{
+    width: 60px;
+    height: 60px;
+}
+
+/* 快捷导航栏 end */
+
+/* header start */
+.header {
+    height: 140px;
+    
+}
+.header img {
+    height: 170px;
+    width: 190px;
+    /* box-shadow:0px -3px 5px #9d9d9d; */
+    position: absolute;
+    top:-31px;
+    left: 0;
+}
+
+/* header end */
+
+
