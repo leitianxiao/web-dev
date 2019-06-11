@@ -1,2 +1,9 @@
 /* 京东首页css */
 /* 仅写首页独有的样式 */
+
+/* 快捷导航栏 strat */
+.shortcut {
+    height: 30px;
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #ddd;
+}
