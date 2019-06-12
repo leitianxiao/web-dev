@@ -1,7 +1,9 @@
 /* 公共样式 */
 
 /* 京东的头部和底部也是各个页面共有的，写在base.css中 */
-
+body {
+    background-color: #f0f3ef;
+}
 .w{
     width: 1190px;
     margin: auto;
@@ -50,6 +52,7 @@ ul {
     height: 80px;
     background-image: url(../images/topbanner.jpg);
     position: relative;
+    z-index: 1;
     
 }
 
@@ -89,5 +92,6 @@ ul {
     top: 15px;
     right: 160px;
 }
+
 
 /* 京东顶部 end */
