@@ -1,7 +1,137 @@
 /* 京东首页css */
 /* 仅写首页独有的样式 */
 
-/* 快捷导航栏 strat */
+.fs {
+    height: 480px;
+    
+}
+.fs_inner {
+    height: 480px;
+    /* background-color: orange; */
+}
+.fs_inner_cols1 {
+    height: 470px;
+    width: 190px;
+    padding-top:10px;
+    float: left;
+    background-color: #fff;
+}
+.fs_inner_cols1 li{
+    font-size: 0px;
+    height: 26px;
+    line-height: 26px;
+    padding-left:18px;
+    width: 172px;
+}
+.fs_inner_cols1 a, .fs_inner_cols1 span {
+    color:#626262;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+.fs_inner_cols1 a:hover {
+    color:#f10215;
+}
 
 
+.fs_inner_cols2 {
+    width: 580px;
+    height: 480px;
+   
+    float: left;
+    margin: 0 10px;
+}
+.fs_inner_cols3 {
+    height: 470px;
+    width: 190px;
+    float: left;
+    padding-top: 10px;
+}
+.fs_inner_cols3 img {
+    height: 150px;
+    width: 190px;
+    float: left;
+    display: block;
+    margin-bottom: 10px;
+}
 
+.fs_inner_user {
+    width: 190px;
+    height: 140px;
+    /* background-color: pink; */
+    float: right;
+}
+.fs_inner_news {
+    padding-top:8px;
+    width: 190px;
+    height:122px;
+    background-color: pink;
+    float: right;
+
+}
+.fs_inner_service {
+    width: 190px;
+    height: 210px;
+    background-color: pink;
+    float: right;
+}
+
+.user_inner {
+    height: 78px;
+    width: 190px;
+    padding-top: 62px;
+    
+
+}
+.user_inner p {
+    margin:0;
+    text-align: center;
+    color:#666666;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+}
+.user_profit {
+    text-align: center;
+    margin-top: 10px;
+    
+
+}
+.user_inner p>a {
+    color:#666666;
+    font-size: 12px;
+}
+
+.user_profit a {
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    border-radius: 13px;
+    margin:0 5px;
+    box-shadow: 6px 8px 20px rgba(45,45,45,.15);
+    font-size: 12px;
+    line-height: 25px;
+}
+.user_pro_newer {
+    color:#e43f3b;
+}
+.user_pro_plus {
+    color:#e5d790;
+    background-color: #363634;
+}
+
+.news_hd h5 {
+    margin: 0;
+    height: 25px;
+    display: inline-block;
+    float: left;
+}
+
+.news_hd a{
+    float: right;
+    font-size: 12px;
+    color: #666666;
+    display: block;
+    padding-right: 10px;
+
+}
