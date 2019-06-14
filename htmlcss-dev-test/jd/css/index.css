@@ -3,11 +3,27 @@
 
 .fs {
     height: 480px;
+    position: relative;
     
 }
 .fs_inner {
+    position: relative;
     height: 480px;
     /* background-color: orange; */
+    z-index: 11;
+}
+.ad {
+    width: 100%;
+    height: 710px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: url(../images/fly.png) no-repeat top center;
+}
+.ad a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 .fs_inner_cols1 {
     height: 470px;
