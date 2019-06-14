@@ -36,11 +36,71 @@
 
 .fs_inner_cols2 {
     width: 580px;
-    height: 480px;
-   
+    height: 480px;  
     float: left;
     margin: 0 10px;
 }
+.arr-l {
+    float: left;
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    background-color: black;
+    top:50%;
+    margin-top:-40px;
+}
+
+.arr-r {
+
+    right: 0;
+}
+
+.fs_inner_cols2>a {
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    background:rgba(0, 0, 0, 0.3);
+    top:50%;
+    margin-top:-40px;
+    z-index: 11;
+}
+.fs_inner_cols2 .iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 60px;
+    text-align: center;
+}
+
+.yuandian{
+    height: 18px;
+    width: 150px;
+    position: absolute;
+    left:50%;
+    margin-left: -75px;
+    bottom: 20px;
+    background-color:rgba(255, 255, 255, 0.1);
+    z-index: 11;
+
+}
+
+
+.yuandian li {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 1px 1px;
+}
+
+.yuandian a{
+    display: block;
+    height: 12px;
+}
+
+
 .fs_inner_cols3 {
     height: 470px;
     width: 190px;
@@ -55,24 +115,54 @@
     margin-bottom: 10px;
 }
 
+.fs_inner_cols4 {
+    background-color: #fff;
+    height: 470px;
+    width: 190px;
+    float: right;
+    margin-top: 10px;
+}
 .fs_inner_user {
     width: 190px;
     height: 140px;
     /* background-color: pink; */
     float: right;
+    position: relative;
 }
+
+.user_nologin {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left:-27px;
+    /* background-color: pink; */
+    border-radius: 55px;
+    border: 5px solid #e3e1df;
+    box-shadow: 3px 6px 25px #c3c3c3;
+    overflow: hidden;
+
+}
+.user_nologin img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* display: block; */
+    vertical-align: middle;
+}
+
 .fs_inner_news {
     padding-top:8px;
     width: 190px;
     height:122px;
-    background-color: pink;
     float: right;
 
 }
 .fs_inner_service {
     width: 190px;
     height: 210px;
-    background-color: pink;
+    
     float: right;
 }
 
@@ -124,7 +214,7 @@
     margin: 0;
     height: 25px;
     display: inline-block;
-    float: left;
+    padding-left: 15px;
 }
 
 .news_hd a{
@@ -134,4 +224,81 @@
     display: block;
     padding-right: 10px;
 
+}
+
+.news_list {
+    height: 96px;
+    width: 160px;
+    margin: 0 15px;
+    padding-top: 5px;
+   
+}
+.news_list li{
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    overflow: hidden;/*文字溢出时隐藏*/
+	white-space: nowrap;/*强制在同一行显示所有文本*/
+	text-overflow: ellipsis;/*溢出部分用省略号代替*/
+   
+}
+.news_list span {
+    display: inline-block;
+    height: 16px;
+    width: 35px;
+    text-align: center; 
+    background-color: #e47f7f;
+    border-radius: 5px;
+    line-height: 16px;
+    color: #fff;
+
+}
+
+.news_list a {
+    color: #666666;
+}
+
+.service-items {
+    height: 160px;
+    width: 168px;
+    /* background-color:purple; */
+    margin: 0 11px;
+    border-top: 1px solid #666666;
+    padding-top: 30px;
+
+}
+
+.service-items li {
+    display: inline-block;
+    height: 40px;
+    width: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.service-items a {
+    color: #666;
+    font-size: 12px;
+    display: block;
+    width: 42px;
+
+}
+.service-items a:hover {
+    color:#f10215;
+}
+
+.service-items .iconfont {
+    font-family: "iconfont" ;
+    font-size: 25px;
+    font-style: normal;
+    color: #bEa68d;
+    text-align: center;
+    height: 24px;
+    margin: auto;
+}
+.service-items span {
+    font-size:12px;
+    display: inline-block;
+    text-align: center;
+    color: #bEa68d;
+    margin: auto;
 }
