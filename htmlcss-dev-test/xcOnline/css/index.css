@@ -1,0 +1,97 @@
+/* 首页css */
+body {
+    background-color: #f3f5f7;
+}
+header {
+    height: 70px;
+}
+.header-w {
+    height: 70px;
+    background-color: pink;
+    position: relative;
+}
+/* logo start */
+.logo {
+    width: 170px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    left: -170px;
+    margin-top: -17px;
+  }
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+.logo a {
+    display: block;
+    width: 170px;
+    height: 35px;
+}  
+.logo h1 {
+    position: absolute;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+/* logo end */
+ 
+/* nav start */
+nav ul {
+    height: 70px;
+}
+nav li {
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 10px;
+}
+nav li a {
+    height: 40px;
+    padding:5px 5px;
+    font-size: 16px;
+}
+nav li a:hover {
+    color: #4182FA;
+    border-bottom: 2px solid #4182FA;
+}
+/* nav end */
+
+/* search start */
+.header-search {
+    width: 300px;
+    height: 40px;
+    /* background-color: purple; */
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 300px;
+}
+
+.header-search input {
+    height: 38px;
+    width: 248px;
+    float: left;
+    padding: 10px;
+    margin: 1px 0 1px 1px;
+    outline: none;
+    border: 1px solid #4182FA;
+}
+
+.header-search button {
+    width: 50px;
+    height: 38px;
+    margin: 1px 0;
+    float: left;
+    border:none;
+    background-color: #4182FA;
+}
+.header-search button::after {
+    content: "\e611";
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* search end */
