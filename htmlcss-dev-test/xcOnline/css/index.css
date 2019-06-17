@@ -7,7 +7,6 @@ header {
 }
 .header-w {
     height: 70px;
-    background-color: pink;
     position: relative;
 }
 /* logo start */
@@ -95,3 +94,16 @@ nav li a:hover {
 }
 
 /* search end */
+
+/* banner start */
+.banner {
+    height: 400px;
+    background-color: pink;
+}
+.banner-w {
+    height: 400px;
+    background: url(../images/banner.png) no-repeat top center;
+}
+
+
+/* banner end */
