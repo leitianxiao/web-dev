@@ -804,12 +804,18 @@ console.log(str);
 通过构造函数创建数组
 
 ```javascript
-var arr = new Array();//Array()就是构造函数，new是创建
+/*
+arr是数组名，Array()就是构造函数，new是创建
+此时没有数据，是一个空数组
+*/
+var arr = new Array();
+/*
+数字表示数组长度
+如果数组没有数据，但是有长度，数组中的每个值就是undefined
+*/
+var 数组名 = new Array(数字);
+
 ```
-
-
-
-
 
 通过数组字面量创建数组
 
