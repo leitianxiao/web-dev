@@ -1161,12 +1161,21 @@ var 变量 = 函数名(实参1, 实参2, 实参3);
 
 ### arguments的使用
 
-> JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。也就是说所有函数都内置了一个arguments对象，arguments对象中存储了传递的所有的实参。arguments是一个伪数组，因此及可以进行遍历
+> JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。也就是说所有函数都内置了一个arguments对象，arguments对象中存储了传递的所有的实参。arguments是一个伪数组，因此可以进行遍历
 
 - 案例
 ```javascript
 求任意个数的最大值
 求任意个数的和
+function getSum() {
+    var sum=0;
+    for (var i=0;i<arguments.length;i++) {
+      sum=sum+arguments[i];
+    }
+    return sum;
+}
+console.log(getSum(10,20,30,100));
+console.log(getSum(10,20));
 ```
 
 ### 案例
@@ -1184,43 +1193,82 @@ var 变量 = 函数名(实参1, 实参2, 实参3);
 ### 匿名函数
 
 > 匿名函数：没有名字的函数
+>
+> 命名函数：函数有函数名
 
 匿名函数如何使用：
 
 	将匿名函数赋值给一个变量，这样就可以通过变量进行调用
-	匿名函数自调用
 
-关于自执行函数（匿名函数自调用）的作用：防止全局变量污染。
-### 自调用函数
->匿名函数不能通过直接调用来执行，因此可以通过匿名函数的自调用的方式来执行
+函数的两种定义方式：
+
+第一种：函数声明
+
 ```javascript
+function 函数名(){
+  //函数体
+}
+```
+
+第二种：函数表达式
+
+```javascript
+var 变量名=function () {
+  //函数体
+};//注意加分号
+```
+
+### 自调用函数
+
+>匿名函数不能通过直接调用来执行，因此可以通过匿名函数的自调用的方式来执行
+自执行函数（匿名函数自调用）的作用：防止全局变量污染。
+
+```javascript
+//调用
+(匿名函数代码)();
+//示例
 (function () {
   alert(123);
 })();
 ```
+特点：
+
+自调用函数是一次性的。
+
+不会出现命名冲突问题。
+
 ### 函数是一种数据类型
 
 ```javascript
 function fn() {}
-console.log(typeof fn);
+console.log(typeof fn);//函数的数据类型为function
 ```
 
 - 函数作为参数
 
-因为函数也是一种类型，可以把函数作为两一个函数的参数，在两一个函数中调用
+因为函数也是一种类型，可以把函数作为一个函数的参数，在一个函数中调用。
+
+如果一个函数作为参数，那么我们说这个参数（函数），叫回调函数。
+
+只要是一个函数作为参数使用，它就是回调函数。
 
 - 函数做为返回值
 
 因为函数是一种类型，所以可以把函数可以作为返回值从函数内部返回，这种用法在后面很常见。
 
 ```javascript
-function fn(b) {
-  var a = 10;
-  return function () {
-    alert(a+b);
-  }
+function f1() {
+    console.log("f1被调用");
+    return function () {
+      console.log("匿名函数被调用");
+    };
 }
-fn(15)();
+		
+    var ff=f1();//调用f1函数，执行了console.log("f1被调用"); ，返回值是 function () {console.log("匿名函数被调用");},所以ff变成一个函数
+		
+    console.log(ff);//打印ff函数的代码function () {console.log("匿名函数被调用");}
+
+    console.log(ff());//调用ff函数，执行了console.log("匿名函数被调用"); , 返回值是undefined
 ```
 
 ### 代码规范
@@ -1250,16 +1298,47 @@ fn(15)();
 
 - 全局变量
 
-  在任何地方都可以访问到的变量就是全局变量，对应全局作用域
+  在任何地方都可以访问到的变量就是全局变量，对应全局作用域。
 
 - 局部变量
 
   只在固定的代码片段内可访问到的变量，最常见的例如函数内部。对应局部作用域(函数作用域)
 
+注意：
+
+使用var声明的变量是全局变量，函数内部定义的变量是局部变量。
+
+函数外部不能使用，除了函数内部，其他位置定义的变量都是全局变量。
+
+局部变量退出作用域之后会释放内存空间。
+
+全局变量关闭网页或浏览器才会释放，就会占空间，消耗内存，所以尽量少使用全局变量。
+
+### 隐式全局变量
+
+> 隐式全局变量：声明的变量没有var，作用与全局的
+>
+> 
+
+```javascript
+function sum() {
+  	var sum3=40;
+    var sum1=10;
+    sum2=20;
+}
+console.log(sum1);// sum1 is not defined
+console.log(sum2+10);//sum2 is not defined
+sum();//调用函数
+console.log(sum2+10);//写在函数中的不带var的变量，被调用后,变成全局变量
+delete sum3;
+delete sum2;
+console.log(typeof sum3);//number
+console.log(typeof sum2);//undefined
 ```
-不使用var声明的变量是全局变量，不推荐使用。
-变量退出作用域之后会销毁，全局变量关闭网页或浏览器才会销毁
-```
+
+注意：
+
+使用var 定义变量不会被删除，隐式全局变量可以被删除。
 
 ### 块级作用域
 
