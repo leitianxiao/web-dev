@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-width: 320px;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        header {
+            height: 150px;
+        }
+        header img {
+            height: 150px;
+            width: 100%;
+        }
+        nav {
+            border: 1px solid #cccccc;
+            padding: 4px;
+        }
+        .row {
+            height: 90px;
+            display: flex;
+            background-color: #ff6a7f;
+            border-radius: 5px;
+        }
+        .row div {
+            height: 100%;
+            flex: 1;
+            border-right:1px solid #fff;
+        }
+        .row div:nth-child(3) {
+            border-right:none;
+        }
+        .row a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            line-height: 45px;   
+        }
+        .row-33 {
+            display: flex;
+            flex-direction:column;
+        }
+        .row-33 a {
+            flex:1;
+            border-bottom: 1px solid #fff;
+        }
+        .row-33 a:nth-child(2) {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="mtrip-banner.jpg" alt="">
+    </header>
+    <nav>
+        <div class="row">
+            <div>
+                <a href="#">酒店</a>
+                <i></i>
+            </div>
+            <div class="row-33">
+                <a href="#">民俗</a>
+                <a href="#">客栈</a>
+            </div>
+            <div class="row-33">
+                <a href="#">公寓</a>
+                <a href="#">宾馆</a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

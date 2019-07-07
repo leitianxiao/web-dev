@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .cls {
+            background-color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="button" value="开灯" id="btn">
+    <script src="common.js"></script>
+    <script>
+        var btnObj=my$("btn");
+        btnObj.onclick=function () {
+            if (document.body.className!="cls") {
+                document.body.className = "cls";
+                btnObj.value = "关灯";
+            }else{
+                document.body.className="";
+                btnObj.value="开灯";
+            }
+
+
+
+        }
+        
+
+    </script>
+</body>
+</html>

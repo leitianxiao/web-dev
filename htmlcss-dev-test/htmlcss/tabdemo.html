@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            font-size: 12px;
+            color: #747474;
+        }
+        li {
+            list-style: none;
+        }
+        .news {
+            width: 190px;
+            height: 200px;  
+            background-color: pink;
+            padding:5px 15px 0px;
+            margin:100px auto;
+            border-top: 1px solid #333;
+        }
+        .news-tab {
+            border-bottom: 1px solid #ccc;
+            padding: 3px 0;
+            position: relative;
+        }
+        .cuxiao {
+            border-right: 1px solid #747474;
+            padding-right:10px; 
+        }
+        .news-tab a {
+            font-size: 12px;
+            color:#747474;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+        .news-tab-more {
+            position: absolute;
+            bottom: 5px;
+            right: 0;
+    
+        }
+        .line {
+            width: 35px;
+            height: 2px;
+            background-color: #f10215;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+        }
+        .news-list {
+            margin-top:10px ;
+        }
+        .news-list li{
+            width: 190px;
+            height: 23px;
+            line-height: 23px;
+            margin: 0;
+          
+        }
+        .news-list a {
+            overflow: hidden;/*文字溢出时隐藏*/
+            white-space: nowrap;/*强制在同一行显示所有文本*/
+            text-overflow: ellipsis;/*溢出部分用省略号代替*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="news">
+        <div class="news-tab">
+            <a href="javascript:;" class="cuxiao">促销</a>
+            <a href="javascript:;">广告</a>
+            <a href="#" class="news-tab-more">更多</a>
+            <div class="line"></div>
+
+        </div>
+        <div class="news-list">
+            <ul>
+                <li>
+                    <a href="#">
+                        刘鹤、李强出席第十一届陆家嘴论坛 共同为科创板开板
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        刘鹤、李强出席第十一届陆家嘴论坛 共同为科创板开板
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        刘鹤、李强出席第十一届陆家嘴论坛 共同为科创板开板
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        刘鹤、李强出席第十一届陆家嘴论坛 共同为科创板开板
+                    </a>
+                </li>
+            </ul>
+            <!-- <ul>
+                <li>
+                    <a href="#">
+                        刘鹤、李强出席第十一届陆家嘴论坛 共同为科创板开板
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        刘鹤、李强出席第十一届陆家嘴论坛 共同为科创板开板
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        刘鹤、李强出席第十一届陆家嘴论坛 共同为科创板开板
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        刘鹤、李强出席第十一届陆家嘴论坛 共同为科创板开板
+                    </a>
+                </li>
+            </ul> -->
+        </div>
+    </div>
+</body>
+</html>
