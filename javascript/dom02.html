@@ -7,45 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        li {
-            list-style: none;
-            height: 50px;
-            border: 5px coral;
-            cursor: pointer;
-        }
-    
-
 
     </style>
 </head>
 <body>
-    <!--鼠标经过高亮-->
+    <div class="box" id="box">
+        <div class="hd">
+            <span>娱乐</span>
+            <span>体育</span>
+            <span>文学</span>
+            <span>纪录</span>
+        </div>
 
-    <ul id="uu">
-        <li>hello</li>
-        <li>sally</li>
-        <li>shazi</li>
-        <li>xixi</li>
-        <li>haha</li>
-        <li>heooll</li>
-    </ul>
+        <div class="bd"></div>
+    </div>
     <script src="common.js"></script>
     <script>
-        var list=document.getElementsByTagName("li");
-        for (var i=0;i<list.length;i++){
-            //鼠标经过事件 onmouseover
-            list[i].onmouseover=function () {
-                this.style.backgroundColor="yellow";
-            }
-            //鼠标移除事件 onmouseout
-            list[i].onmouseout=function () {
-                this.style.backgroundColor="";
-            }
-        }
+
     </script>
 </body>
+
 </html>
